@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "506808047598",
+    "firebase_url": "https://fir-df206.firebaseio.com",
+    "project_id": "fir-df206",
+    "storage_bucket": "fir-df206.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506808047598:android:44d1d57ff7d95b2bd920ff",
+        "android_client_info": {
+          "package_name": "com.example.my_kitchen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "506808047598-r8i6attvuduud6hrsb4evkcoaln4ktgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkyiINUl0zuS-mqJM4mpyuZuVrJMoWI_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "506808047598-r8i6attvuduud6hrsb4evkcoaln4ktgv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506808047598:android:883e74138d115d35d920ff",
+        "android_client_info": {
+          "package_name": "kreations.paul.mybmi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "506808047598-r8i6attvuduud6hrsb4evkcoaln4ktgv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkyiINUl0zuS-mqJM4mpyuZuVrJMoWI_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "506808047598-r8i6attvuduud6hrsb4evkcoaln4ktgv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
