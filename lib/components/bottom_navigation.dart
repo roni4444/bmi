@@ -49,7 +49,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 builder: (context) => const ChartPage(),
               ),
             );
-            break;
         }
       } else {
         Navigator.pushReplacement(
