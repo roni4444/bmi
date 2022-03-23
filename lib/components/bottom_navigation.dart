@@ -79,7 +79,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
           icon: Icon(FontAwesomeIcons.userTie),
         ),
         BottomNavigationBarItem(
-          tooltip: null,
           label: "",
           icon: Icon(
             FontAwesomeIcons.angleUp,
@@ -87,7 +86,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
           ),
         ), //BMI Result Page
         BottomNavigationBarItem(
-          tooltip: null,
           label: "",
           icon: Icon(
             FontAwesomeIcons.angleUp,

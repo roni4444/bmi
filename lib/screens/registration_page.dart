@@ -27,8 +27,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passController = TextEditingController();
-  FirebaseAuth auth = FirebaseAuth.instance;
-  FirebaseFirestore firestore = FirebaseFirestore.instance;
+  final FirebaseAuth auth = FirebaseAuth.instance;
+  final FirebaseFirestore firestore = FirebaseFirestore.instance;
   late UserCredential userCredential;
   final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
   Gender selectedGender = Gender.male;
@@ -52,8 +52,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
   }
 
   Future<void> addUser(String email, String name, String gender, int feet,
-      int inches, int weight, int dobday, int dobmonth, int dobyear) async {
-    return firestore.collection('users').doc(email).set({
+      int inches, int weight, int dobday, int dobmonth, int dobyear) {
+    return firestore.collection("users").doc(email).set({
       'Email': email,
       'Name': name,
       'Gender': gender,
@@ -116,8 +116,8 @@ class _RegistrationPageState extends State<RegistrationPage> {
                   prefs.setInt("UserDOBYear", _selectedDateTime.year);
                 });
                 addUser(
-                        _emailController.text,
-                        _nameController.text,
+                        _emailController.value.text.toString(),
+                        _nameController.value.text.toString(),
                         (selectedGender == Gender.male) ? "Male" : "Female",
                         feet,
                         inch,
