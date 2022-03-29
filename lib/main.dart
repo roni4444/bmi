@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mybmi/firebase_options.dart';
@@ -5,7 +7,9 @@ import 'package:mybmi/screens/splash_screen.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MyApp());
+  if (Platform.isAndroid) {
+    runApp(const MyApp());
+  }
 }
 
 class MyApp extends StatefulWidget {
@@ -19,7 +23,7 @@ class _MyAppState extends State<MyApp> {
   bool initialized = false;
   void initializeFlutterFire() async {
     await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
+      options: DefaultFirebaseOptions.android,
     );
     setState(() {
       initialized = true;

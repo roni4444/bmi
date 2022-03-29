@@ -5,6 +5,7 @@ import 'package:mybmi/components/bottom_navigation.dart';
 import 'package:mybmi/components/floating_action.dart';
 import 'package:mybmi/components/reusable_card.dart';
 import 'package:mybmi/components/shared_appbar.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../constraints.dart';
@@ -32,6 +33,7 @@ class _ResultsPageState extends State<ResultsPage> {
   String uid = "";
   String email = "";
   FirebaseFirestore firestore = FirebaseFirestore.instance;
+
   Future<void> prepareAndAddBMI() async {
     uid = await _prefs.then((SharedPreferences prefs) {
       return prefs.getString("UserUID") ?? "";
@@ -63,7 +65,6 @@ class _ResultsPageState extends State<ResultsPage> {
 
   @override
   Widget build(BuildContext context) {
-    prepareAndAddBMI();
     return Scaffold(
       appBar: SharedAppBar(
         appBar: AppBar(),
@@ -124,6 +125,27 @@ class _ResultsPageState extends State<ResultsPage> {
                   Text(
                     widget.bmiResult,
                     style: kBMITextStyle,
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      FloatingActionButton(
+                        onPressed: () {
+                          prepareAndAddBMI()
+                              .whenComplete(() => Navigator.pop(context));
+                        },
+                        elevation: 10.0,
+                        child: const Text("Save"),
+                      ),
+                      FloatingActionButton(
+                        onPressed: () => Share.share(
+                          "My Bmi is" + widget.bmiResult.toString(),
+                        ),
+                        elevation: 10.0,
+                        child: const Text("Share"),
+                      ),
+                    ],
                   ),
                   Text(
                     widget.interpretation,

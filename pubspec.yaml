@@ -45,6 +45,8 @@ dependencies:
   connectivity_plus: ^2.0.3
   image_picker: ^0.8.4+4
   shared_preferences: ^2.0.9
+  flutter_slidable: ^1.2.0
+  share_plus: ^4.0.3
 
 dev_dependencies:
   flutter_test:
